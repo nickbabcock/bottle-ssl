@@ -17,7 +17,8 @@
 					<td><input id="Password" name="Password" type="password"></td>
 				</tr>
 			</table>
-			<input type='submit' value='Log in'>
+			<input id='btnLogout' type='button' value='Log out' disabled/>
+			<input type='submit' value='Log in'/>
 		</form>
 	</body>
 	<script src="//ajax.googleapis.com/ajax/libs/jquery/1.7.2/jquery.min.js" type="text/javascript"></script>
@@ -27,9 +28,22 @@
 				url: "/whoami",
 				cache: false,
 				success: function(data) {
-					$('#userName').text(data.d);
+					if (data.d)
+					{
+						$('#userName').text(data.d);
+						$('#btnLogout').removeAttr('disabled');
+						$('#btnLogout').click(function() {
+							$.post('/logout', null, function() {
+								location.reload();
+							});
+						});
 					}
-				});
+					else
+					{
+						$('#userName').text("Not logged in");
+					}
+				}
+			});
 			});
 	</script>
 </html>

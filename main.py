@@ -20,7 +20,7 @@ def whoami():
   try:
     username = current_user()
   except:
-    username = 'unauthorized user'  
+    username = None 
   finally:
     return json.dumps({ "d" : username })
 

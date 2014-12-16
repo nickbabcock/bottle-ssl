@@ -77,7 +77,7 @@ class SSLCherryPyServer(ServerAdapter):
         from cherrypy import wsgiserver
         from cherrypy.wsgiserver.ssl_pyopenssl import pyOpenSSLAdapter
         server = wsgiserver.CherryPyWSGIServer((self.host, self.port), handler)
-        server.ssl_adapter = pyOpenSSLAdapter('cacert.pem', 'privkey.pem', None)
+        server.ssl_adapter = pyOpenSSLAdapter('cacert.pem', 'privkey.pem')
         try:
             server.start()
         finally:

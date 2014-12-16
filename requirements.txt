@@ -1,0 +1,10 @@
+Beaker==1.6.4
+CherryPy==3.2.4
+argparse==1.2.1
+bottle==0.12.7
+cffi==0.8.6
+cryptography==0.6.1
+pyOpenSSL==0.14
+pycparser==2.10
+six==1.8.0
+wsgiref==0.1.2

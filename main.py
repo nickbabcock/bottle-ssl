@@ -79,15 +79,15 @@ def current_user():
 #so that we can specify SSL. Using just server='cherrypy'
 #uses the default cherrypy server, which doesn't use SSL
 class SSLCherryPyServer(ServerAdapter):
-  def run(self, handler): 
-    from cherrypy import wsgiserver
-    server = wsgiserver.CherryPyWSGIServer((self.host, self.port), handler)
-    server.ssl_certificate = "cacert.pem"
-    server.ssl_private_key = "privkey.pem"
-    try:
-      server.start()
-    finally:
-      server.stop()
+    def run(self, handler):
+        from cherrypy import wsgiserver
+        from cherrypy.wsgiserver.ssl_pyopenssl import pyOpenSSLAdapter
+        server = wsgiserver.CherryPyWSGIServer((self.host, self.port), handler)
+        server.ssl_adapter = pyOpenSSLAdapter('cacert.pem', 'privkey.pem', None)
+        try:
+            server.start()
+        finally:
+            server.stop()
 
 #define beaker options
 #-Each session data is stored inside a file located inside a 

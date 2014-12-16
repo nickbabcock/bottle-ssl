@@ -21,6 +21,10 @@ name and password and verify it on a linux server.
 - [PyOpenSSL][pyopenssl]: CherryPy can't operate SSL without this!
 - [OpenSSL][openssl]: Program used to generate the self signed certificate.
 
+Before you `pip install` the python depenencies you will need to install
+Openssl and libffi-dev (most likely with the command `sudo apt-get install
+openssl libffi-dev`)
+
 ## OpenSSL and Self Signed Certificates
 
 First the SSL certificate and private key are generated using OpenSSL.  It is
@@ -29,8 +33,12 @@ Explorer will not display the page no matter what][1024bit].  The generated
 files, in this case privkey.pem and cacert.pem.  For simplicity's sake, these
 are stored inside the directory.
 
-	genrsa -out privkey.pem 1024
-	req -new -x509 -key privkey.pem -out cacert.pem -days 1095
+```bash
+
+openssl genrsa -out privkey.pem 1024
+openssl req -new -x509 -key privkey.pem -out cacert.pem -days 1095
+
+```
 
 While the source code can speak for itself I thought I would highlight some
 more of confusing aspects of this project. 

@@ -28,14 +28,15 @@ openssl libffi-dev`)
 ## OpenSSL and Self Signed Certificates
 
 First the SSL certificate and private key are generated using OpenSSL.  It is
-absolutley critical to generate a private key with 1024 bits else [Internet
-Explorer will not display the page no matter what][1024bit].  The generated
-files, in this case privkey.pem and cacert.pem.  For simplicity's sake, these
-are stored inside the directory.
+absolutley critical to generate a private key with at least 1024 bits
+(recommended: 2048/4096) else you'll run into security or other issues (eg.
+[Internet Explorer will not display the page no matter what if there are less
+than 1024 bits][1024bit]).  The generated files, in this case are privkey.pem and
+cacert.pem.  For simplicity's sake, these are stored inside the directory.
 
 ```bash
 
-openssl genrsa -out privkey.pem 1024
+openssl genrsa -out privkey.pem 2048
 openssl req -new -x509 -key privkey.pem -out cacert.pem -days 1095
 
 ```

@@ -1,4 +1,0 @@
-Beaker
-CherryPy
-bottle
-pyOpenSSL

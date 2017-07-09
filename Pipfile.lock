@@ -1,0 +1,56 @@
+{
+    "_meta": {
+        "hash": {
+            "sha256": "60ba255f4de81870f97ac84a1bd0cc7543933baf112db3044afb21826f51c6dc"
+        },
+        "requires": {},
+        "sources": [
+            {
+                "url": "https://pypi.python.org/simple",
+                "verify_ssl": true
+            }
+        ]
+    },
+    "default": {
+        "asn1crypto": {
+            "version": "==0.22.0"
+        },
+        "beaker": {
+            "version": "==1.9.0"
+        },
+        "bottle": {
+            "version": "==0.12.13"
+        },
+        "cffi": {
+            "version": "==1.10.0"
+        },
+        "cheroot": {
+            "version": "==5.7.0"
+        },
+        "cryptography": {
+            "version": "==1.9"
+        },
+        "enum34": {
+            "version": "==1.1.6"
+        },
+        "funcsigs": {
+            "version": "==1.0.2"
+        },
+        "idna": {
+            "version": "==2.5"
+        },
+        "ipaddress": {
+            "version": "==1.0.18"
+        },
+        "pycparser": {
+            "version": "==2.18"
+        },
+        "pyopenssl": {
+            "version": "==17.1.0"
+        },
+        "six": {
+            "version": "==1.10.0"
+        }
+    },
+    "develop": {}
+}

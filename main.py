@@ -1,8 +1,8 @@
 from bottle import (route, response, run, redirect, request, static_file,
                     ServerAdapter, default_app)
 from beaker.middleware import SessionMiddleware
-from cherrypy import wsgiserver
-from cherrypy.wsgiserver.ssl_pyopenssl import pyOpenSSLAdapter
+from cheroot import wsgi
+from cheroot.ssl.pyopenssl import pyOpenSSLAdapter
 from OpenSSL import SSL
 import json
 import crypt
@@ -89,7 +89,7 @@ class SecuredSSLServer(pyOpenSSLAdapter):
 # uses the default cherrypy server, which doesn't use SSL
 class SSLCherryPyServer(ServerAdapter):
     def run(self, handler):
-        server = wsgiserver.CherryPyWSGIServer((self.host, self.port), handler)
+        server = wsgi.Server((self.host, self.port), handler)
         server.ssl_adapter = SecuredSSLServer('cacert.pem', 'privkey.pem')
         try:
             server.start()

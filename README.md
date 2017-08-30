@@ -71,6 +71,12 @@ gunicorn for a middle of the road solution.
 
 For a heavyweight solution run nginx, apache, HAProxy in front of bottle.
 
+## Testing SSL Configuration
+
+[sslyze](https://github.com/nabla-c0d3/sslyze) will run a suite of checks on a
+given site and report back which protocols, cipher suites, and vulnerabilities
+are available.
+
 [bottle]: http://bottlepy.org/
 [cherrypy]: http://cherrypy.org/
 [beaker]: http://beaker.readthedocs.org/en/latest/

@@ -2,8 +2,8 @@ from bottle import (route, response, run, redirect, request, static_file,
                     ServerAdapter, default_app)
 from beaker.middleware import SessionMiddleware
 from cheroot import wsgi
-from cheroot.ssl.pyopenssl import pyOpenSSLAdapter
-from OpenSSL import SSL
+from cheroot.ssl.builtin import BuiltinSSLAdapter
+import ssl
 import json
 import crypt
 import spwd
@@ -72,25 +72,19 @@ def current_user():
     return username
 
 
-# By default, the server will allow negotiations with extremely old protocols
-# that are susceptible to attacks, so we only allow TLSv1.2
-class SecuredSSLServer(pyOpenSSLAdapter):
-    def get_context(self):
-        c = super(SecuredSSLServer, self).get_context()
-        c.set_options(SSL.OP_NO_SSLv2)
-        c.set_options(SSL.OP_NO_SSLv3)
-        c.set_options(SSL.OP_NO_TLSv1)
-        c.set_options(SSL.OP_NO_TLSv1_1)
-        return c
-
-
 # Create our own sub-class of Bottle's ServerAdapter
 # so that we can specify SSL. Using just server='cherrypy'
 # uses the default cherrypy server, which doesn't use SSL
 class SSLCherryPyServer(ServerAdapter):
     def run(self, handler):
         server = wsgi.Server((self.host, self.port), handler)
-        server.ssl_adapter = SecuredSSLServer('cacert.pem', 'privkey.pem')
+        server.ssl_adapter = BuiltinSSLAdapter('cacert.pem', 'privkey.pem')
+
+        # By default, the server will allow negotiations with extremely old protocols
+        # that are susceptible to attacks, so we only allow TLSv1.2
+        server.ssl_adapter.context.options |= ssl.OP_NO_TLSv1
+        server.ssl_adapter.context.options |= ssl.OP_NO_TLSv1_1
+
         try:
             server.start()
         finally:

@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "60ba255f4de81870f97ac84a1bd0cc7543933baf112db3044afb21826f51c6dc"
+            "sha256": "29e0e0d7e1739682a84b62b4dee7778e906279ddf52388812f7e9b4143597b8a"
         },
         "requires": {},
         "sources": [
@@ -12,41 +12,14 @@
         ]
     },
     "default": {
-        "asn1crypto": {
-            "version": "==0.22.0"
-        },
         "beaker": {
             "version": "==1.9.0"
         },
         "bottle": {
             "version": "==0.12.13"
         },
-        "cffi": {
-            "version": "==1.10.0"
-        },
         "cheroot": {
-            "version": "==5.7.0"
-        },
-        "cryptography": {
-            "version": "==1.9"
-        },
-        "enum34": {
-            "version": "==1.1.6"
-        },
-        "funcsigs": {
-            "version": "==1.0.2"
-        },
-        "idna": {
-            "version": "==2.5"
-        },
-        "ipaddress": {
-            "version": "==1.0.18"
-        },
-        "pycparser": {
-            "version": "==2.18"
-        },
-        "pyopenssl": {
-            "version": "==17.1.0"
+            "version": "==5.8.3"
         },
         "six": {
             "version": "==1.10.0"

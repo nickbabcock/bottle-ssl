@@ -5,5 +5,4 @@ verify_ssl = true
 [packages]
 beaker = "*"
 bottle = "*"
-pyopenssl = "*"
 cheroot = "*"

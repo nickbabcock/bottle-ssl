@@ -20,12 +20,11 @@ linux server and remember the user through the use of a cookie.
   traffic, so this is where CherryPy comes in. Since CherryPy is based on
   cheroot, we'll be using cheroot directly.
 - [Beaker][beaker]: Will be used as Bottle middleware that allows session data.
-- [PyOpenSSL][pyopenssl]: We will customize the SSL options through this!
 - [OpenSSL][openssl]: Program used to generate the self signed certificate.
 
 Before you `pipenv install` the python dependencies you will need to install
-Openssl and libffi-dev (most likely with the command `sudo apt-get install
-openssl libffi-dev`)
+Openssl (most likely with the command `sudo apt-get install
+openssl`)
 
 ## OpenSSL and Self Signed Certificates
 

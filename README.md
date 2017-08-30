@@ -64,8 +64,12 @@ look at the code to see how!
 
 ## Alternatives
 
-Run a TLS terminator (nginx, apache, HAProxy) in front of bottle. Keep in mind,
-these are heavyweight solutions to a heavyweight problem.
+Run app with [gunicorn](http://gunicorn.org/) (one will need to slightly change
+the code to return an app). Gunicorn will bring the speed and the ssl, so one
+could get rid of CherryPy (cheroot). I definitely recommend checking out
+gunicorn for a middle of the road solution.
+
+For a heavyweight solution run nginx, apache, HAProxy in front of bottle.
 
 [bottle]: http://bottlepy.org/
 [cherrypy]: http://cherrypy.org/

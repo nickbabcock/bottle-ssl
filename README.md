@@ -22,9 +22,9 @@ linux server and remember the user through the use of a cookie.
 - [Beaker][beaker]: Will be used as Bottle middleware that allows session data.
 - [OpenSSL][openssl]: Program used to generate the self signed certificate.
 
-Before you `pipenv install` the python dependencies you will need to install
-Openssl (most likely with the command `sudo apt-get install
-openssl`)
+Before you [`pipenv install`](http://docs.pipenv.org/en/latest/) the python
+dependencies you will need to install Openssl (most likely with the command
+`sudo apt-get install openssl`)
 
 ## OpenSSL and Self Signed Certificates
 

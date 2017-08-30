@@ -90,6 +90,7 @@ class SSLCherryPyServer(ServerAdapter):
         finally:
             server.stop()
 
+
 # define beaker options
 # -Each session data is stored inside a file located inside a
 #  folder called data that is relative to the working directory

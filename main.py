@@ -106,6 +106,7 @@ session_opts = {
 
 # Create the default bottle app and then wrap it around
 # a beaker middleware and send it back to bottle to run
-app = default_app()
-myapp = SessionMiddleware(app, session_opts)
-run(app=myapp, host='0.0.0.0', port=443, server=SSLCherryPyServer)
+app = SessionMiddleware(default_app(), session_opts)
+
+if __name__ == '__main__':
+    run(app=app, host='0.0.0.0', port=443, server=SSLCherryPyServer)

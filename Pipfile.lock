@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "a5047085620b67e9aa9bf8cd3591b69da3f94b9f0d193e0d098f8da9b9c3883d"
+            "sha256": "86b94fb44d7ab386a5355214793d89012c636b63368a6003a92775e7f06e936c"
         },
         "requires": {},
         "sources": [
@@ -29,14 +29,29 @@
         }
     },
     "develop": {
+        "certifi": {
+            "version": "==2017.7.27.1"
+        },
+        "chardet": {
+            "version": "==3.0.4"
+        },
+        "idna": {
+            "version": "==2.6"
+        },
         "py": {
             "version": "==1.4.34"
         },
         "pytest": {
             "version": "==3.2.2"
         },
+        "requests": {
+            "version": "==2.18.4"
+        },
         "setuptools": {
             "version": "==36.5.0"
+        },
+        "urllib3": {
+            "version": "==1.22"
         }
     }
 }

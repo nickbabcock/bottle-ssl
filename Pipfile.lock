@@ -1,7 +1,7 @@
 {
     "_meta": {
         "hash": {
-            "sha256": "29e0e0d7e1739682a84b62b4dee7778e906279ddf52388812f7e9b4143597b8a"
+            "sha256": "a5047085620b67e9aa9bf8cd3591b69da3f94b9f0d193e0d098f8da9b9c3883d"
         },
         "requires": {},
         "sources": [
@@ -21,9 +21,22 @@
         "cheroot": {
             "version": "==5.8.3"
         },
+        "funcsigs": {
+            "version": "==1.0.2"
+        },
         "six": {
-            "version": "==1.10.0"
+            "version": "==1.11.0"
         }
     },
-    "develop": {}
+    "develop": {
+        "py": {
+            "version": "==1.4.34"
+        },
+        "pytest": {
+            "version": "==3.2.2"
+        },
+        "setuptools": {
+            "version": "==36.5.0"
+        }
+    }
 }

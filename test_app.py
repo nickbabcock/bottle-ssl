@@ -5,19 +5,21 @@ import requests
 import time
 import urllib3
 
-
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
 
 
 def run_app():
     run(app=app, host='0.0.0.0', port=8443, server=SSLCherryPyServer)
 
+
 def setup_module(module):
     module.proc = Process(target=run_app)
     module.proc.start()
 
+
 def teardown_module(module):
     module.proc.terminate()
+
 
 # Purpose of this test:
 #  - Not logged in by default
@@ -27,17 +29,17 @@ def teardown_module(module):
 def test_whoami():
     s = requests.Session()
     who = s.get('https://localhost:8443/whoami', verify=False).json()
-    assert who == { 'd': None }
+    assert who == {'d': None}
 
-    creds = { 'UserName': 'BottleUser', 'Password': 'iambottle' }
+    creds = {'UserName': 'BottleUser', 'Password': 'iambottle'}
     login = s.post('https://localhost:8443/login', data=creds)
     assert login.status_code == 200
 
     who = s.get('https://localhost:8443/whoami', verify=False).json()
-    assert who == { 'd': 'BottleUser' }
+    assert who == {'d': 'BottleUser'}
 
     logout = s.post('https://localhost:8443/logout')
     assert logout.status_code == 200
 
     who = s.get('https://localhost:8443/whoami', verify=False).json()
-    assert who == { 'd': None }
+    assert who == {'d': None}

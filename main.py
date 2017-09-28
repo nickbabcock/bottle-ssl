@@ -48,7 +48,7 @@ def login():
         crypted = spwd.getspnam(name)[1]
 
     if crypt.crypt(passwd, crypted) == crypted:
-        session = beakerSession()
+        session = beaker_session()
         session['username'] = name
 
     redirect('/index.html')
@@ -56,16 +56,16 @@ def login():
 
 @route('/logout', method='POST')
 def logout():
-    session = beakerSession()
+    session = beaker_session()
     session.delete()
 
 
-def beakerSession():
+def beaker_session():
     return request.environ.get('beaker.session')
 
 
 def current_user():
-    session = beakerSession()
+    session = beaker_session()
     username = session.get('username', None)
     if username is None:
         raise Exception("Unauthenticated user")

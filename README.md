@@ -1,5 +1,13 @@
 # bottle-ssl
 
+This repo contains a sample web app that demonstrates a secure login mechanism
+for linux users using SSL on top of Bottle. The authentication mechanism
+requires the app to be ran on root on a linux system, but this is just for
+demonstration purposes. Other than authentication, the code is cross platform
+and python 2 and 3 compatible.
+
+## Introduction
+
 [Bottle][bottle] is a great micro web framework that can be as minimalist or
 feature rich as one wants. Bottle is great for rapid development and for
 debugging. However, Bottle is not recommended to be deployed in production

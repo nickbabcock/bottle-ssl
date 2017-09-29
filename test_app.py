@@ -28,6 +28,12 @@ def test_json_whoami():
     assert resp.json() == {'d': None}
 
 
+# Our code implicitly relies on ssl.create_default_context being available, as
+# cheroot's builtin ssl module won't create the ssl context without it.
+def test_ssl_default_context():
+    assert hasattr(ssl, 'create_default_context')
+
+
 # Purpose of this test:
 #  - Not logged in by default
 #  - The log in mechanism works

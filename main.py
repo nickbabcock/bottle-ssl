@@ -4,7 +4,6 @@ from beaker.middleware import SessionMiddleware
 from cheroot import wsgi
 from cheroot.ssl.builtin import BuiltinSSLAdapter
 import ssl
-import json
 import crypt
 import spwd
 import pwd
@@ -22,7 +21,7 @@ def whoami():
     except:
         username = None
     finally:
-        return json.dumps({"d": username})
+        return {"d": username}
 
 
 @route('/')

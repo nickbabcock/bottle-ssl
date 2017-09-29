@@ -26,11 +26,10 @@
   <script type="text/javascript">
     $(function () {
       $.ajax({
-        url: "/whoami",
+        url: '/whoami',
         cache: false,
         success: function(data) {
-          if (data.d)
-          {
+          if (data.d) {
             $('#userName').text(data.d);
             $('#btnLogout').removeAttr('disabled');
             $('#btnLogout').click(function() {
@@ -38,10 +37,8 @@
                 location.reload();
               });
             });
-          }
-          else
-          {
-            $('#userName').text("Not logged in");
+          } else {
+            $('#userName').text('Not logged in');
           }
         }
       });

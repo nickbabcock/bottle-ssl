@@ -17,7 +17,6 @@ def send_static(filename):
 
 @route('/whoami')
 def whoami():
-    response.content_type = 'application/json; charset=utf-8'
     try:
         username = current_user()
     except:

@@ -21,6 +21,13 @@ def teardown_module(module):
     module.proc.terminate()
 
 
+def test_json_whoami():
+    s = requests.Session()
+    resp = s.get('https://localhost:8443/whoami', verify=False)
+    assert 'application/json' in resp.headers['content-type']
+    assert resp.json() == {'d': None}
+
+
 # Purpose of this test:
 #  - Not logged in by default
 #  - The log in mechanism works

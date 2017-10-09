@@ -4,7 +4,8 @@ This repo contains a sample web app that demonstrates a secure login mechanism
 for linux users using SSL on top of Bottle. The authentication mechanism
 requires the app to be ran on root on a linux system, but this is just for
 demonstration purposes. Other than authentication, the code is cross platform
-and python 2 and 3 compatible.
+and python 2 and 3 compatible. See the Docker instructions if you want to try
+out the sample app.
 
 ## Introduction
 
@@ -84,6 +85,22 @@ For a heavyweight solution run nginx, apache, HAProxy in front of bottle.
 [sslyze](https://github.com/nabla-c0d3/sslyze) will run a suite of checks on a
 given site and report back which protocols, cipher suites, and vulnerabilities
 are available.
+
+## Docker
+
+Included in this repo is a Dockerfile that spins up a bottle app using a self
+signed certificate and demonstrates authentication. Since this is a sample app,
+it's not uploaded to the registry but if you already have `docker`, building
+the container is quite straightforward:
+
+```bash
+cd bottle-ssl
+docker build -t nickbabcock/bottle-ssl .
+docker run -ti -p 9443:443 nickbabcock/bottle-ssl
+```
+
+Then navigate your browser to port 9443 of the docker machine. For the
+username, enter `BottleUser` and for the password `iambottle`
 
 [bottle]: http://bottlepy.org/
 [cherrypy]: http://cherrypy.org/

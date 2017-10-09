@@ -6,6 +6,12 @@ def steps = pythons.collectEntries {
 
 parallel steps
 
+node {
+    stage("Build Docker Sample") {
+        docker.build("nickbabcock/bottle-ssl")
+    }
+}
+
 def job(version) {
     return {
         docker.image("python:${version}").inside {

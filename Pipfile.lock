@@ -42,7 +42,7 @@
             "version": "==1.4.34"
         },
         "pytest": {
-            "version": "==3.2.2"
+            "version": "==3.2.3"
         },
         "requests": {
             "version": "==2.18.4"

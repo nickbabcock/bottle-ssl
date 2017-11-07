@@ -45,10 +45,7 @@ than 1024 bits][1024bit]).  The generated files, in this case are privkey.pem an
 cacert.pem. For simplicity's sake, these are stored inside the directory.
 
 ```bash
-
-openssl genrsa -out privkey.pem 2048
-openssl req -new -x509 -key privkey.pem -out cacert.pem -days 1095
-
+openssl req -new -x509 -days 1095 -nodes -newkey rsa:2048 -out cacert.pem -keyout privkey.pem
 ```
 
 ## Bottle and SSL

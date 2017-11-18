@@ -39,16 +39,16 @@
             "version": "==2.6"
         },
         "py": {
-            "version": "==1.4.34"
+            "version": "==1.5.2"
         },
         "pytest": {
-            "version": "==3.2.3"
+            "version": "==3.2.5"
         },
         "requests": {
             "version": "==2.18.4"
         },
         "setuptools": {
-            "version": "==36.6.0"
+            "version": "==36.7.2"
         },
         "urllib3": {
             "version": "==1.22"

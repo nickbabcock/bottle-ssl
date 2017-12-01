@@ -29,26 +29,38 @@
         }
     },
     "develop": {
+        "attrs": {
+            "version": "==17.3.0"
+        },
         "certifi": {
             "version": "==2017.11.5"
         },
         "chardet": {
             "version": "==3.0.4"
         },
+        "funcsigs": {
+            "version": "==1.0.2"
+        },
         "idna": {
             "version": "==2.6"
+        },
+        "pluggy": {
+            "version": "==0.6.0"
         },
         "py": {
             "version": "==1.5.2"
         },
         "pytest": {
-            "version": "==3.2.5"
+            "version": "==3.3.0"
         },
         "requests": {
             "version": "==2.18.4"
         },
         "setuptools": {
-            "version": "==36.7.2"
+            "version": "==38.2.3"
+        },
+        "six": {
+            "version": "==1.11.0"
         },
         "urllib3": {
             "version": "==1.22"

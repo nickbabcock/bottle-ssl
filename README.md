@@ -4,8 +4,8 @@ This repo contains a sample web app that demonstrates a secure login mechanism
 for linux users using SSL on top of Bottle. The authentication mechanism
 requires the app to be ran on root on a linux system, but this is just for
 demonstration purposes. Other than authentication, the code is cross platform
-and python 2 and 3 compatible. See the Docker instructions if you want to try
-out the sample app.
+and python 2 and 3 compatible. See the [Docker instructions](#docker) if you
+want to try out the sample app.
 
 ## Introduction
 

@@ -19,10 +19,13 @@
             "version": "==0.12.13"
         },
         "cheroot": {
-            "version": "==5.10.0"
+            "version": "==6.0.0"
         },
         "funcsigs": {
             "version": "==1.0.2"
+        },
+        "more-itertools": {
+            "version": "==4.0.1"
         },
         "six": {
             "version": "==1.11.0"

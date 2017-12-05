@@ -23,7 +23,7 @@ linux server and remember the user through the use of a cookie.
 
 ## Requirements:
 
-- Python 2.5+. Minimum requirement to run Bottle and friends.
+- Python 2.7.9, 3.4, or later. Minimum requirement to run Bottle and friends.
 - [Bottle][bottle]: This will be the web framework that will have everything based on it.
 - [CherryPy][cherrypy] (now cheroot): Bottle can't achieve SSL or heavy
   traffic, so this is where CherryPy comes in. Since CherryPy is based on

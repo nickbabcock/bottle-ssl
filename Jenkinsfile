@@ -4,6 +4,12 @@ def steps = pythons.collectEntries {
     ["python $it": job(it)]
 }
 
+properties([
+    pipelineTriggers([
+        cron('@weekly')
+    ])
+])
+
 parallel steps
 
 node {

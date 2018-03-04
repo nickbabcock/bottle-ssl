@@ -1,6 +1,7 @@
 from main import app, SSLCherryPyServer
 from bottle import run
 from multiprocessing import Process
+from requests.adapters import HTTPAdapter
 import requests
 import time
 import urllib3
@@ -24,6 +25,7 @@ def teardown_module(module):
 
 def test_json_whoami():
     s = requests.Session()
+    s.mount('https://', HTTPAdapter(max_retries=10))
     resp = s.get('https://localhost:8443/whoami', verify=False)
     assert 'application/json' in resp.headers['content-type']
     assert resp.json() == {'d': None}
@@ -42,6 +44,7 @@ def test_ssl_default_context():
 #  - After logging out, user is actually logged out
 def test_whoami():
     s = requests.Session()
+    s.mount('https://', HTTPAdapter(max_retries=10))
     who = s.get('https://localhost:8443/whoami', verify=False).json()
     assert who == {'d': None}
 

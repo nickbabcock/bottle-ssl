@@ -2,12 +2,19 @@ from main import app, SSLCherryPyServer
 from bottle import run
 from multiprocessing import Process
 from requests.adapters import HTTPAdapter
+from requests.packages.urllib3.util.retry import Retry
 import requests
 import time
 import urllib3
 import ssl
 
 urllib3.disable_warnings(urllib3.exceptions.InsecureRequestWarning)
+
+# Create a retry object in case bottle is slow to start our server
+retry = Retry(
+    total=5,
+    backoff_factor=0.3,
+)
 
 
 def run_app():
@@ -25,7 +32,7 @@ def teardown_module(module):
 
 def test_json_whoami():
     s = requests.Session()
-    s.mount('https://', HTTPAdapter(max_retries=10))
+    s.mount('https://', HTTPAdapter(max_retries=retry))
     resp = s.get('https://localhost:8443/whoami', verify=False)
     assert 'application/json' in resp.headers['content-type']
     assert resp.json() == {'d': None}
@@ -44,7 +51,7 @@ def test_ssl_default_context():
 #  - After logging out, user is actually logged out
 def test_whoami():
     s = requests.Session()
-    s.mount('https://', HTTPAdapter(max_retries=10))
+    s.mount('https://', HTTPAdapter(max_retries=retry))
     who = s.get('https://localhost:8443/whoami', verify=False).json()
     assert who == {'d': None}
 

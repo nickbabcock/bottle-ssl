@@ -26,11 +26,18 @@
         ]
     },
     "default": {
+        "backports.functools-lru-cache": {
+            "hashes": [
+                "sha256:f0b0e4eba956de51238e17573b7087e852dfe9854afd2e9c873f73fc0ca0a6dd",
+                "sha256:9d98697f088eb1b0fa451391f91afb5e3ebde16bbdb272819fd091151fda4f1a"
+            ],
+            "version": "==1.5"
+        },
         "beaker": {
             "hashes": [
-                "sha256:317d0f9a3618364a4ce447d227b698bd7cdcad57301326ce8013d200abd695bf"
+                "sha256:32276ed686ab7203baf60520452903e35d1c3515f632683ea4a5881c8cd55921"
             ],
-            "version": "==1.9.0"
+            "version": "==1.9.1"
         },
         "bottle": {
             "hashes": [
@@ -40,10 +47,10 @@
         },
         "cheroot": {
             "hashes": [
-                "sha256:36655d1b6d25342b4501c3bb0c92665ded96f4e071a6320941ca3b47ceedc75d",
-                "sha256:ba474e5149b03fabc2bba2d0b490b4d95443894d45b1430b799dccea3b3f4683"
+                "sha256:3b589d63cfde60bb91f6be19e9c683ebe904c0e082f292ba97727d5f746012f8",
+                "sha256:f75a02bd60f44de2f502226f97a3e8d3b2a799213fce4d5e06142cdf6d69199f"
             ],
-            "version": "==6.0.0"
+            "version": "==6.2.1"
         },
         "funcsigs": {
             "hashes": [

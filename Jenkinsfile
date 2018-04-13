@@ -1,4 +1,4 @@
-def pythons = ["2.7.14", "3.5.5", "3.6.4"]
+def pythons = ["2.7", "3.5", "3.6"]
 
 def steps = pythons.collectEntries {
     ["python $it": job(it)]

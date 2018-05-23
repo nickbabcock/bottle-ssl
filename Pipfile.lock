@@ -47,10 +47,10 @@
         },
         "cheroot": {
             "hashes": [
-                "sha256:01cbd1cea13cf7837ce9f0cb96b7fc2164cde5e328b9ea506e1eabf51a2cecbc",
-                "sha256:9997623a88400fd41706978adcfbeceee1fe0202a886228e471a58263b643fef"
+                "sha256:1c7d326a1970a62f46cc8bdc0b573e2d25ae185cf474e7dbac8d3a84e3efafdc",
+                "sha256:56c07903580d51ebd456e764d2bef334e97025369cfe6af56357053a9ff72446"
             ],
-            "version": "==6.2.4"
+            "version": "==6.3.0"
         },
         "funcsigs": {
             "hashes": [

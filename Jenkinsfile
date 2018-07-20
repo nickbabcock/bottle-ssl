@@ -27,7 +27,7 @@ def job(version) {
             sh 'openssl req -new -x509 -days 365 -nodes -out cacert.pem -keyout privkey.pem -subj "/C=AA/ST=State/L=Location/O=IT/CN=bottle-ssl.com"'
             sh 'pip install pipenv'
             sh 'pipenv install --dev --verbose'
-            sh 'pipenv run pytest --junitxml=TestResults.xml'
+            sh 'pipenv run py.test --junitxml=TestResults.xml'
             junit 'TestResults.xml'
         }
     }

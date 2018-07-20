@@ -3,19 +3,6 @@
         "hash": {
             "sha256": "86b94fb44d7ab386a5355214793d89012c636b63368a6003a92775e7f06e936c"
         },
-        "host-environment-markers": {
-            "implementation_name": "cpython",
-            "implementation_version": "0",
-            "os_name": "posix",
-            "platform_machine": "x86_64",
-            "platform_python_implementation": "CPython",
-            "platform_release": "4.10.0-40-generic",
-            "platform_system": "Linux",
-            "platform_version": "#44-Ubuntu SMP Thu Nov 9 14:49:09 UTC 2017",
-            "python_full_version": "2.7.13",
-            "python_version": "2.7",
-            "sys_platform": "linux2"
-        },
         "pipfile-spec": 6,
         "requires": {},
         "sources": [

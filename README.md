@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/nickbabcock/bottle-ssl.svg?branch=master)](https://travis-ci.org/nickbabcock/bottle-ssl)
+
 # bottle-ssl
 
 This repo contains a sample web app that demonstrates a secure login mechanism

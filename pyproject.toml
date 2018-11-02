@@ -1,0 +1,15 @@
+[tool.poetry]
+name = "bottle-ssl"
+version = "0.1.0"
+description = "A simple web page using BottlePy and SSL"
+authors = ["Sébastien Eustace <sebastien@eustace.io>"]
+
+[tool.poetry.dependencies]
+python = "*"
+beaker = "^1.10"
+cheroot = "^6.5"
+bottle = "^0.12.13"
+
+[tool.poetry.dev-dependencies]
+pytest = "^3.9"
+requests = "^2.20"

@@ -9,9 +9,10 @@ matrix:
     - env: PYTHON=2.7
     - env: PYTHON=3.5
     - env: PYTHON=3.6
+    - env: PYTHON=3.7
 
 before_install:
   - docker build -t bottle-ssl --build-arg PYTHON_VERSION=${PYTHON} .
 
 script:
-  - docker run -ti bottle-ssl pipenv run py.test
+  - docker run -ti bottle-ssl poetry run py.test

@@ -11,5 +11,5 @@ cheroot = "^6.5"
 bottle = "^0.12.13"
 
 [tool.poetry.dev-dependencies]
-pytest = "^3.9"
+pytest = "^4.0"
 requests = "^2.20"

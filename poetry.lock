@@ -39,7 +39,7 @@ description = "Fast and simple WSGI-framework for small web-applications."
 name = "bottle"
 optional = false
 python-versions = "*"
-version = "0.12.13"
+version = "0.12.14"
 
 [[package]]
 category = "dev"
@@ -77,7 +77,7 @@ marker = "sys_platform == \"win32\""
 name = "colorama"
 optional = false
 python-versions = ">=2.7, !=3.0.*, !=3.1.*, !=3.2.*, !=3.3.*"
-version = "0.4.0"
+version = "0.4.1"
 
 [[package]]
 category = "main"
@@ -204,7 +204,7 @@ python-versions = "*"
 version = "1.22"
 
 [metadata]
-content-hash = "0e60fe859c68b5547ca33cbf426ba33d8c188ef82278b0f9624e7ac364f9c5f1"
+content-hash = "025653dec39d650e7aae101d339d85365c92cc5c8c95fca7be17747139f5c9f0"
 python-versions = "*"
 
 [metadata.hashes]
@@ -212,11 +212,11 @@ atomicwrites = ["0312ad34fcad8fac3704d441f7b317e50af620823353ec657a53e981f92920c
 attrs = ["10cbf6e27dbce8c30807caf056c8eb50917e0eaafe86347671b57254006c3e69", "ca4be454458f9dec299268d472aaa5a11f67a4ff70093396e1ceae9c76cf4bbb"]
 "backports.functools-lru-cache" = ["9d98697f088eb1b0fa451391f91afb5e3ebde16bbdb272819fd091151fda4f1a", "f0b0e4eba956de51238e17573b7087e852dfe9854afd2e9c873f73fc0ca0a6dd"]
 beaker = ["6072892918225f5a055413082f2ff285f3ebca6a3873a0d6e163253ba83f0450"]
-bottle = ["39b751aee0b167be8dffb63ca81b735bbf1dd0905b3bc42761efedee8f123355"]
+bottle = ["484b7f6499f0039ace2efb0aaeb143b179c38f364c2c1c87213905118b2c500f", "d363d91ac84a9b68760578eebc0d3ba5a6323ff2cd8fd79d9b34181fac913ab4"]
 certifi = ["339dc09518b07e2fa7eda5450740925974815557727d6bd35d319c1524a04a4c", "6d58c986d22b038c8c0df30d639f23a3e6d172a05c3583e766f4c0b785c0986a"]
 chardet = ["84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae", "fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"]
 cheroot = ["ba2b9b0f59fcdcd920d51f61c19c4a8d65f8469741e634c04eaf6feca5b76837", "f1bb443f266898bc516de78a98e601e0681770a2f2310c2335648c4985e35184"]
-colorama = ["a3d89af5db9e9806a779a50296b5fdb466e281147c2c235e8225ecc6dbf7bbf3", "c9b54bebe91a6a803e0772c8561d53f2926bfeb17cd141fbabcb08424086595c"]
+colorama = ["05eed71e2e327246ad6b38c540c4a3117230b19679b875190486ddd2d721422d", "f8ac84de7840f5b9c4e3347b3c1eaa50f7e49c2b07596221daec5edaabbd7c48"]
 funcsigs = ["330cc27ccbf7f1e992e69fef78261dc7c6569012cf397db8d3de0234e6c937ca", "a7bb0f2cf3a3fd1ab2732cb49eba4252c2af4240442415b4abce3b87022a8f50"]
 idna = ["156a6814fb5ac1fc6850fb002e0852d56c0c8d2531923a51032d1b70760e186e", "684a38a6f903c1d71d6d5fac066b58d7768af4de2b832e426ec79c30daa94a16"]
 more-itertools = ["c187a73da93e7a8acc0001572aebc7e3c69daf7bf6881a2cea10650bd4420092", "c476b5d3a34e12d40130bc2f935028b5f636df8f372dc2c1c01dc19681b2039e", "fcbfeaea0be121980e15bc97b3817b5202ca73d0eae185b4550cbfce2a3ebb3d"]

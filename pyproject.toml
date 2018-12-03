@@ -8,7 +8,7 @@ authors = ["Sébastien Eustace <sebastien@eustace.io>"]
 python = "*"
 beaker = "^1.10"
 cheroot = "^6.5"
-bottle = "^0.12.13"
+bottle = "^0.12.15"
 
 [tool.poetry.dev-dependencies]
 pytest = "^4.0"

@@ -12,4 +12,4 @@ bottle = "^0.12.16"
 
 [tool.poetry.dev-dependencies]
 pytest = "^4.0"
-requests = "^2.20"
+requests = "^2.21"

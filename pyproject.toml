@@ -2,7 +2,6 @@
 name = "bottle-ssl"
 version = "0.1.0"
 description = "A simple web page using BottlePy and SSL"
-authors = ["Sébastien Eustace <sebastien@eustace.io>"]
 
 [tool.poetry.dependencies]
 python = "*"

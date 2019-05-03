@@ -60,7 +60,7 @@ description = "Highly-optimized, pure-python HTTP server"
 name = "cheroot"
 optional = false
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
-version = "6.5.4"
+version = "6.5.5"
 
 [package.dependencies]
 "backports.functools-lru-cache" = "*"
@@ -228,7 +228,7 @@ beaker = ["8eb05d9f7362dc5840b188ac7fff6146b41dceb000deab58a07e9c8da893ed9b"]
 bottle = ["9c310da61e7df2b6ac257d8a90811899ccb3a9743e77e947101072a2e3186726", "ca43beafbdccabbe31b758a4f34d1e44985a9b9539516775208b2b0f903eafa0"]
 certifi = ["47f9c83ef4c0c621eaef743f133f09fa8a74a9b75f037e8624f83bd1b6626cb7", "993f830721089fef441cdfeb4b2c8c9df86f0c63239f06bd025a76a7daddb033"]
 chardet = ["84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae", "fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"]
-cheroot = ["beb8eb9eeff5746059607e81b72efd6f4ca099111dc13f8961ae9e4f63f7786b", "c52f8df52c461351b91ce9a7769208c064bae74bd61b531312ffc62bff667650"]
+cheroot = ["1593fa2a42b18744ac485aadf5fec4a29ebfee00ba3937a2269b8ffc94447879", "f6a85e005adb5bc5f3a92b998ff0e48795d4d98a0fbb7edde47a7513d4100601"]
 colorama = ["05eed71e2e327246ad6b38c540c4a3117230b19679b875190486ddd2d721422d", "f8ac84de7840f5b9c4e3347b3c1eaa50f7e49c2b07596221daec5edaabbd7c48"]
 funcsigs = ["330cc27ccbf7f1e992e69fef78261dc7c6569012cf397db8d3de0234e6c937ca", "a7bb0f2cf3a3fd1ab2732cb49eba4252c2af4240442415b4abce3b87022a8f50"]
 idna = ["c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407", "ea8b7f6188e6fa117537c3df7da9fc686d485087abf6ac197f9c46432f7e4a3c"]

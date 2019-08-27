@@ -28,7 +28,10 @@ description = "A Session and Caching library with WSGI Middleware"
 name = "beaker"
 optional = false
 python-versions = "*"
-version = "1.10.1"
+version = "1.11.0"
+
+[package.dependencies]
+funcsigs = "*"
 
 [[package]]
 category = "main"
@@ -95,9 +98,8 @@ python-versions = "*"
 version = "0.5.5"
 
 [[package]]
-category = "dev"
+category = "main"
 description = "Python function signatures from PEP362 for Python 2.6, 2.7 and 3.2+"
-marker = "python_version < \"3.0\""
 name = "funcsigs"
 optional = false
 python-versions = "*"
@@ -295,14 +297,14 @@ python-versions = ">=2.7"
 version = "0.5.1"
 
 [metadata]
-content-hash = "1137b9e2ea6368d243e197d65adb6d9e6d32023612e0dcd03b6ba61dcde30b19"
+content-hash = "e7dfe342cd3011b87e7d565762d4a3752cf4933f51663157e647e6d6f70e5bc5"
 python-versions = "*"
 
 [metadata.hashes]
 atomicwrites = ["0312ad34fcad8fac3704d441f7b317e50af620823353ec657a53e981f92920c0", "ec9ae8adaae229e4f8446952d204a3e4b5fdd2d099f9be3aaf556120135fb3ee"]
 attrs = ["10cbf6e27dbce8c30807caf056c8eb50917e0eaafe86347671b57254006c3e69", "ca4be454458f9dec299268d472aaa5a11f67a4ff70093396e1ceae9c76cf4bbb"]
 "backports.functools-lru-cache" = ["9d98697f088eb1b0fa451391f91afb5e3ebde16bbdb272819fd091151fda4f1a", "f0b0e4eba956de51238e17573b7087e852dfe9854afd2e9c873f73fc0ca0a6dd"]
-beaker = ["8eb05d9f7362dc5840b188ac7fff6146b41dceb000deab58a07e9c8da893ed9b"]
+beaker = ["ad5d1c05027ee3be3a482ea39f8cb70339b41e5d6ace0cb861382754076d187e"]
 bottle = ["1896a33b2c7c5be07491e6789e341f2e9593a0ff024cc0374615118587c81647", "e9eaa412a60cc3d42ceb42f58d15864d9ed1b92e9d630b8130c871c5bb16107c"]
 certifi = ["47f9c83ef4c0c621eaef743f133f09fa8a74a9b75f037e8624f83bd1b6626cb7", "993f830721089fef441cdfeb4b2c8c9df86f0c63239f06bd025a76a7daddb033"]
 chardet = ["84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae", "fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"]

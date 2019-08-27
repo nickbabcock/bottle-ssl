@@ -6,7 +6,7 @@ authors = ["Nick Babcock <nbabcock19@hotmail.com>"]
 
 [tool.poetry.dependencies]
 python = "*"
-beaker = "^1.10"
+beaker = "^1.11"
 cheroot = "^6.5"
 bottle = "^0.12.17"
 

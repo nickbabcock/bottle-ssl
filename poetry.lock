@@ -17,6 +17,7 @@ version = "18.2.0"
 [[package]]
 category = "main"
 description = "backports.functools_lru_cache"
+marker = "python_version < \"3.3\""
 name = "backports.functools-lru-cache"
 optional = false
 python-versions = ">=2.6"
@@ -63,12 +64,16 @@ description = "Highly-optimized, pure-python HTTP server"
 name = "cheroot"
 optional = false
 python-versions = ">=2.7,!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*"
-version = "6.5.8"
+version = "7.0.0"
 
 [package.dependencies]
-"backports.functools-lru-cache" = "*"
+"jaraco.functools" = "*"
 more-itertools = ">=2.6"
 six = ">=1.11.0"
+
+[package.dependencies."backports.functools-lru-cache"]
+python = "<3.3"
+version = "*"
 
 [[package]]
 category = "dev"
@@ -131,6 +136,21 @@ version = "*"
 [package.dependencies.contextlib2]
 python = "<3"
 version = "*"
+
+[[package]]
+category = "main"
+description = "Functools like those found in stdlib"
+name = "jaraco.functools"
+optional = false
+python-versions = ">=2.7"
+version = "2.0"
+
+[package.dependencies]
+more-itertools = "*"
+
+[package.dependencies."backports.functools-lru-cache"]
+python = ">=2.7,<2.8"
+version = ">=1.0.3"
 
 [[package]]
 category = "main"
@@ -297,7 +317,7 @@ python-versions = ">=2.7"
 version = "0.5.1"
 
 [metadata]
-content-hash = "e7dfe342cd3011b87e7d565762d4a3752cf4933f51663157e647e6d6f70e5bc5"
+content-hash = "84e211f822cd4111af23aa544aa3cd43ab881afc4930040b5933ecc345b5b9e4"
 python-versions = "*"
 
 [metadata.hashes]
@@ -308,13 +328,14 @@ beaker = ["ad5d1c05027ee3be3a482ea39f8cb70339b41e5d6ace0cb861382754076d187e"]
 bottle = ["1896a33b2c7c5be07491e6789e341f2e9593a0ff024cc0374615118587c81647", "e9eaa412a60cc3d42ceb42f58d15864d9ed1b92e9d630b8130c871c5bb16107c"]
 certifi = ["47f9c83ef4c0c621eaef743f133f09fa8a74a9b75f037e8624f83bd1b6626cb7", "993f830721089fef441cdfeb4b2c8c9df86f0c63239f06bd025a76a7daddb033"]
 chardet = ["84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae", "fc323ffcaeaed0e0a02bf4d117757b98aed530d9ed4531e3e15460124c106691"]
-cheroot = ["427e7e3ce51ad5a6e5cf953252b5782d5dfbeb544c09910634971bc06df6621b", "74d733c55178812253d855990f7ad7b31ab4ee8dab80e4803bd5e52299c50395"]
+cheroot = ["6168371ab9aaf574ac5f75675f244bbfebf990202bf75048065e9d675b9ae719", "8cc7c28961db2e13d0cac6b234a589a314c1844f7bbf54e67888ac9a2e25ac59"]
 colorama = ["05eed71e2e327246ad6b38c540c4a3117230b19679b875190486ddd2d721422d", "f8ac84de7840f5b9c4e3347b3c1eaa50f7e49c2b07596221daec5edaabbd7c48"]
 configparser = ["8be81d89d6e7b4c0d4e44bcc525845f6da25821de80cb5e06e7e0238a2899e32", "da60d0014fd8c55eb48c1c5354352e363e2d30bbf7057e5e171a468390184c75"]
 contextlib2 = ["509f9419ee91cdd00ba34443217d5ca51f5a364a404e1dce9e8979cea969ca48", "f5260a6e679d2ff42ec91ec5252f4eeffdcf21053db9113bd0a8e4d953769c00"]
 funcsigs = ["330cc27ccbf7f1e992e69fef78261dc7c6569012cf397db8d3de0234e6c937ca", "a7bb0f2cf3a3fd1ab2732cb49eba4252c2af4240442415b4abce3b87022a8f50"]
 idna = ["c357b3f628cf53ae2c4c05627ecc484553142ca23264e593d327bcde5e9c3407", "ea8b7f6188e6fa117537c3df7da9fc686d485087abf6ac197f9c46432f7e4a3c"]
 importlib-metadata = ["a9f185022cfa69e9ca5f7eabfd5a58b689894cb78a11e3c8c89398a8ccbb8e7f", "df1403cd3aebeb2b1dcd3515ca062eecb5bd3ea7611f18cba81130c68707e879"]
+"jaraco.functools" = ["35ba944f52b1a7beee8843a5aa6752d1d5b79893eeb7770ea98be6b637bf9345", "e9e377644cee5f6f9128b4dab1631fca74981236e95a255f80e4292bcd2b5284"]
 more-itertools = ["38a936c0a6d98a38bcc2d03fdaaedaba9f412879461dd2ceff8d37564d6522e4", "c0a5785b1109a6bd7fac76d6837fd1feca158e54e521ccd2ae8bfe393cc9d4fc", "fe7a7cae1ccb57d33952113ff4fa1bc5f879963600ed74918f1236e212ee50b9"]
 packaging = ["0c98a5d0be38ed775798ece1b9727178c4469d9c3b4ada66e8e6b7849f8732af", "9e1cbf8c12b1f1ce0bb5344b8d7ecf66a6f8a6e91bcb0c84593ed6d3ab5c4ab3"]
 pathlib2 = ["25199318e8cc3c25dcb45cbe084cc061051336d5a9ea2a12448d3d8cb748f742", "5887121d7f7df3603bca2f710e7219f3eca0eb69e0b7cc6e0a022e155ac931a7"]

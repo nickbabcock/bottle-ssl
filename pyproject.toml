@@ -8,7 +8,7 @@ authors = ["Nick Babcock <nbabcock19@hotmail.com>"]
 python = "*"
 beaker = "^1.11"
 cheroot = "^8.2"
-bottle = "^0.12.17"
+bottle = "^0.12.18"
 
 [tool.poetry.dev-dependencies]
 pytest = "^4.6"

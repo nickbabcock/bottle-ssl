@@ -80,7 +80,7 @@ description = "Highly-optimized, pure-python HTTP server"
 name = "cheroot"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
-version = "8.3.0"
+version = "8.3.1"
 
 [package.dependencies]
 "jaraco.functools" = "*"
@@ -93,7 +93,7 @@ version = "*"
 
 [package.extras]
 docs = ["sphinx (>=1.8.2)", "jaraco.packaging (>=3.2)", "sphinx-tabs (>=1.1.0)", "docutils", "alabaster", "python-dateutil", "sphinxcontrib-spelling (>=4.3.0)"]
-testing = ["pytest (>=4.6.6)", "pytest-mock (>=1.11.0)", "pytest-sugar (>=0.9.1)", "pytest-testmon (<1.0.0)", "pytest-watch (4.2.0)", "pytest-xdist (>=1.28.0)", "jaraco.text (>=3.1)", "coverage (4.5.3)", "codecov (2.0.15)", "pytest-cov (2.7.1)", "trustme (>=0.4.0)", "pyopenssl", "requests-unixsocket", "urllib3 (>=1.25)", "urllib3 (<1.25)", "colorama (!=0.4.2)"]
+testing = ["pytest (>=4.6.6)", "pytest-mock (>=1.11.0)", "pytest-sugar (>=0.9.3)", "pytest-testmon (<1.0.0)", "pytest-watch (4.2.0)", "pytest-xdist (>=1.28.0)", "jaraco.text (>=3.1)", "codecov (2.0.22)", "pytest-cov (2.7.1)", "trustme (>=0.4.0)", "pyopenssl", "requests-unixsocket", "portend", "requests-toolbelt", "jaraco.context", "coverage (5.1)", "urllib3 (>=1.25)", "futures", "coverage (<5)", "urllib3 (<1.25)", "colorama (!=0.4.2)"]
 
 [[package]]
 category = "dev"
@@ -412,8 +412,8 @@ chardet = [
     {file = "chardet-3.0.4.tar.gz", hash = "sha256:84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae"},
 ]
 cheroot = [
-    {file = "cheroot-8.3.0-py2.py3-none-any.whl", hash = "sha256:2b48c88959b5b80a79aca627ae5212acb398becaa70b576b8b89bec1ad0d1367"},
-    {file = "cheroot-8.3.0.tar.gz", hash = "sha256:a0577e1f28661727d472671a7cc4e0c12ea0cbc5220265e70f00a8b8cb628931"},
+    {file = "cheroot-8.3.1-py2.py3-none-any.whl", hash = "sha256:f0d63d054145bc58aac506223ddf35ae628ef9a3dee042915df728b9f61c03cd"},
+    {file = "cheroot-8.3.1.tar.gz", hash = "sha256:7076d5845f64d729e4155ec2650ad24ee70209340d11b9e619a82e9210a579b8"},
 ]
 colorama = [
     {file = "colorama-0.4.1-py2.py3-none-any.whl", hash = "sha256:f8ac84de7840f5b9c4e3347b3c1eaa50f7e49c2b07596221daec5edaabbd7c48"},

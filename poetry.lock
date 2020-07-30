@@ -80,7 +80,7 @@ description = "Highly-optimized, pure-python HTTP server"
 name = "cheroot"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
-version = "8.4.0"
+version = "8.4.2"
 
 [package.dependencies]
 "jaraco.functools" = "*"
@@ -425,8 +425,8 @@ chardet = [
     {file = "chardet-3.0.4.tar.gz", hash = "sha256:84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae"},
 ]
 cheroot = [
-    {file = "cheroot-8.4.0-py2.py3-none-any.whl", hash = "sha256:579f5b35cb229208576954e89509fe8de335d98b5304eaabb235b7cab4342bc9"},
-    {file = "cheroot-8.4.0.tar.gz", hash = "sha256:75af6f1fe1766dd90159486236189284c19d0e8406ed9bec42d32731381aa83c"},
+    {file = "cheroot-8.4.2-py2.py3-none-any.whl", hash = "sha256:931bd488d1465e6f7ddc862537e3d85a2f437b90b13e8ff08ce085b52572f56b"},
+    {file = "cheroot-8.4.2.tar.gz", hash = "sha256:2cab51836f57e340746245eb59dba652428b398fc24f5b2ee75e6671a2cc2a8d"},
 ]
 colorama = [
     {file = "colorama-0.4.1-py2.py3-none-any.whl", hash = "sha256:f8ac84de7840f5b9c4e3347b3c1eaa50f7e49c2b07596221daec5edaabbd7c48"},

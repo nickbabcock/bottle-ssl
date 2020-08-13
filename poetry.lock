@@ -80,7 +80,7 @@ description = "Highly-optimized, pure-python HTTP server"
 name = "cheroot"
 optional = false
 python-versions = "!=3.0.*,!=3.1.*,!=3.2.*,!=3.3.*,>=2.7"
-version = "8.4.0"
+version = "8.4.4"
 
 [package.dependencies]
 "jaraco.functools" = "*"
@@ -96,7 +96,7 @@ python = "<3.4"
 version = "*"
 
 [package.extras]
-docs = ["sphinx (>=1.8.2)", "jaraco.packaging (>=3.2)", "sphinx-tabs (>=1.1.0)", "docutils", "alabaster", "python-dateutil", "sphinxcontrib-spelling (>=4.3.0)"]
+docs = ["sphinx (>=1.8.2)", "jaraco.packaging (>=3.2)", "sphinx-tabs (>=1.1.0)", "docutils", "alabaster", "python-dateutil", "sphinxcontrib-spelling (>=5.2.0)"]
 testing = ["pytest (>=4.6.6)", "pytest-mock (>=1.11.0)", "pytest-sugar (>=0.9.3)", "pytest-testmon (<1.0.0)", "pytest-watch (4.2.0)", "pytest-xdist (>=1.28.0)", "jaraco.text (>=3.1)", "codecov (2.0.22)", "pytest-cov (2.7.1)", "trustme (>=0.4.0)", "pyopenssl", "requests-unixsocket", "portend", "requests-toolbelt", "jaraco.context", "coverage (5.1)", "urllib3 (>=1.25)", "futures", "coverage (<5)", "urllib3 (<1.25)", "colorama (!=0.4.2)", "pytest-forked (>=1.2.0)", "pytest-forked (>=1.1.3)"]
 
 [[package]]
@@ -425,8 +425,8 @@ chardet = [
     {file = "chardet-3.0.4.tar.gz", hash = "sha256:84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae"},
 ]
 cheroot = [
-    {file = "cheroot-8.4.0-py2.py3-none-any.whl", hash = "sha256:579f5b35cb229208576954e89509fe8de335d98b5304eaabb235b7cab4342bc9"},
-    {file = "cheroot-8.4.0.tar.gz", hash = "sha256:75af6f1fe1766dd90159486236189284c19d0e8406ed9bec42d32731381aa83c"},
+    {file = "cheroot-8.4.4-py2.py3-none-any.whl", hash = "sha256:a9423d1c3a772f276971f2bcb53d1f6ab21f4d29a2a7321eed5ec9ba9d913c9c"},
+    {file = "cheroot-8.4.4.tar.gz", hash = "sha256:ca92669cc90fbd0920fda1ebcc431147e7d3ae6887216ce404f85f1b3133fa93"},
 ]
 colorama = [
     {file = "colorama-0.4.1-py2.py3-none-any.whl", hash = "sha256:f8ac84de7840f5b9c4e3347b3c1eaa50f7e49c2b07596221daec5edaabbd7c48"},

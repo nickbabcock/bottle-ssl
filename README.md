@@ -59,8 +59,8 @@ out-of-the box SSL depending on the chosen server.
 from bottle import run
 
 options = {
-  certfile: '',
-  keyfile: ''
+  'certfile': '',
+  'keyfile': ''
 }
 
 run(host='localhost', port=8080, server='cheroot', options=options)

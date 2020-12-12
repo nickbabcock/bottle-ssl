@@ -52,30 +52,42 @@ openssl req -new -x509 -days 1095 -nodes -newkey rsa:2048 -out cacert.pem -keyou
 
 ## Bottle and SSL
 
-Bottle documentation is sparse when it comes to SSL, but it is possible to get
-out-of-the box SSL depending on the chosen server.
+My recommendation is to not use get bogged down in working with the builtin
+servers that bottle recognizes, as sorting out dependencies can be a pain.
+Instead craft your own bottle adapter with cheroot:
 
 ```python
-from bottle import run
+from bottle import ServerAdapter, run
 
-options = {
-  'certfile': '',
-  'keyfile': ''
-}
+class SSLCherootAdapter(ServerAdapter):
+    def run(self, handler):
+        from cheroot import wsgi
+        from cheroot.ssl.builtin import BuiltinSSLAdapter
+        import ssl
 
-run(host='localhost', port=8080, server='cheroot', options=options)
+        server = wsgi.Server((self.host, self.port), handler)
+        server.ssl_adapter = BuiltinSSLAdapter("cacert.pem", "privkey.pem")
+
+        # By default, the server will allow negotiations with extremely old protocols
+        # that are susceptible to attacks, so we only allow TLSv1.2
+        server.ssl_adapter.context.options |= ssl.OP_NO_TLSv1
+        server.ssl_adapter.context.options |= ssl.OP_NO_TLSv1_1
+
+        try:
+            server.start()
+        finally:
+            server.stop()
+
+run(host='localhost', port=8080, server=SSLCherootAdapter)
 ```
-
-This may be fine for some, but for those that don't want to be susceptible to
-insecure defaults, we're going to need to customize the cheroot server. Take a
-look at the code to see how!
 
 ## Alternatives
 
-Run app with [gunicorn](http://gunicorn.org/) (one will need to slightly change
-the code to return an app). Gunicorn will bring the speed and the ssl, so one
-could get rid of CherryPy (cheroot). I definitely recommend checking out
-gunicorn for a middle of the road solution.
+If creating your own adapter is too burdensome, run the app with
+[gunicorn](http://gunicorn.org/) (one will need to slightly change the code to
+return an app). Gunicorn will bring the speed and the ssl, so one could get
+rid of CherryPy (cheroot). I definitely recommend checking out gunicorn for a
+middle of the road solution.
 
 For a heavyweight solution run nginx, apache, HAProxy in front of bottle.
 

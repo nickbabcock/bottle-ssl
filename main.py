@@ -9,9 +9,6 @@ from bottle import (
     default_app,
 )
 from beaker.middleware import SessionMiddleware
-from cheroot import wsgi
-from cheroot.ssl.builtin import BuiltinSSLAdapter
-import ssl
 import crypt
 import spwd
 import pwd
@@ -78,12 +75,12 @@ def current_user():
     return username
 
 
-# Create our own sub-class of Bottle's ServerAdapter
-# so that we can specify SSL. Using just server='cherrypy'
-# uses the default cherrypy server, which doesn't use SSL
-class SSLCherryPyServer(ServerAdapter):
-
+class SSLCherootAdapter(ServerAdapter):
     def run(self, handler):
+        from cheroot import wsgi
+        from cheroot.ssl.builtin import BuiltinSSLAdapter
+        import ssl
+
         server = wsgi.Server((self.host, self.port), handler)
         server.ssl_adapter = BuiltinSSLAdapter("cacert.pem", "privkey.pem")
 
@@ -116,4 +113,4 @@ session_opts = {
 app = SessionMiddleware(default_app(), session_opts)
 
 if __name__ == "__main__":
-    run(app=app, host="0.0.0.0", port=443, server=SSLCherryPyServer)
+    run(app=app, host="0.0.0.0", port=443, server=SSLCherootAdapter)

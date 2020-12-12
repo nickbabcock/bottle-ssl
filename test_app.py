@@ -1,4 +1,4 @@
-from main import app, SSLCherryPyServer
+from main import app, SSLCherootAdapter
 from bottle import run
 from multiprocessing import Process
 from requests.adapters import HTTPAdapter
@@ -12,7 +12,7 @@ retry = Retry(total=5, backoff_factor=0.3)
 
 
 def run_app():
-    run(app=app, host="0.0.0.0", port=8443, server=SSLCherryPyServer)
+    run(app=app, host="0.0.0.0", port=8443, server=SSLCherootAdapter)
 
 
 def setup_module(module):

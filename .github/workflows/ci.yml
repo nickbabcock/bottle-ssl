@@ -1,0 +1,20 @@
+name: ci
+on:
+  push:
+  schedule:
+  - cron: '00 01 * * *'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: [2.7, 3.5, 3.6, 3.7]
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: build docker image
+      run: docker build -t bottle-ssl --build-arg PYTHON_VERSION=${{ matrix.python-version }} .
+    - name: run tests
+      run: docker run bottle-ssl poetry run py.test

@@ -1,4 +1,4 @@
-[![Build Status](https://travis-ci.org/nickbabcock/bottle-ssl.svg?branch=master)](https://travis-ci.org/nickbabcock/bottle-ssl)
+![ci](https://github.com/nickbabcock/bottle-ssl/workflows/ci/badge.svg)
 
 # bottle-ssl
 

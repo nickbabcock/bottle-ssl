@@ -75,7 +75,7 @@ python-versions = "*"
 
 [[package]]
 name = "cheroot"
-version = "8.5.1"
+version = "8.5.2"
 description = "Highly-optimized, pure-python HTTP server"
 category = "main"
 optional = false
@@ -373,8 +373,8 @@ chardet = [
     {file = "chardet-3.0.4.tar.gz", hash = "sha256:84ab92ed1c4d4f16916e05906b6b75a6c0fb5db821cc65e70cbd64a3e2a5eaae"},
 ]
 cheroot = [
-    {file = "cheroot-8.5.1-py2.py3-none-any.whl", hash = "sha256:262097e089ac9d38f21a25ca25fd272fde2b9d5a9950756262c1fb898f5c292b"},
-    {file = "cheroot-8.5.1.tar.gz", hash = "sha256:177b4efe6eee42d899cd6e19b5e5985994cd160e067d1a4f28231e296162e5ea"},
+    {file = "cheroot-8.5.2-py2.py3-none-any.whl", hash = "sha256:7ba11294a83468a27be6f06066df8a0f17d954ad05945f28d228aa3f4cd1b03c"},
+    {file = "cheroot-8.5.2.tar.gz", hash = "sha256:f137d03fd5155b1364bea557a7c98168665c239f6c8cedd8f80e81cdfac01567"},
 ]
 colorama = [
     {file = "colorama-0.4.1-py2.py3-none-any.whl", hash = "sha256:f8ac84de7840f5b9c4e3347b3c1eaa50f7e49c2b07596221daec5edaabbd7c48"},

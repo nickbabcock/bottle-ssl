@@ -5,10 +5,11 @@ description = "A simple web page using BottlePy and SSL"
 authors = ["Nick Babcock <nbabcock19@hotmail.com>"]
 
 [tool.poetry.dependencies]
-python = "*"
+python = ">=2.7,<2.8 || >=3.6"
 beaker = "^1.11"
 cheroot = "^8.6"
 bottle = "^0.12.19"
+requests = "^2.27.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^4.6"

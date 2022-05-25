@@ -26,6 +26,7 @@ def whoami():
     except:
         username = None
     finally:
+        response.set_header("Cache-Control", "no-cache")
         return {"d": username}
 
 
@@ -61,6 +62,7 @@ def login():
 def logout():
     session = beaker_session()
     session.delete()
+    redirect("/index.html")
 
 
 def beaker_session():

@@ -1,3 +1,4 @@
+<!DOCTYPE html>
 <html lang="en">
   <head>
     <meta charset="utf-8">
@@ -18,30 +19,25 @@
           <td><input id="Password" name="Password" type="password"></td>
         </tr>
       </table>
-      <input id='btnLogout' type='button' value='Log out' disabled/>
-      <input type='submit' value='Log in'/>
+      <button formaction="/logout" id='btnLogout' disabled>Log out</button>
+      <button type='submit'>Log in</button>
     </form>
+
+    <script type="text/javascript">
+      (function () {
+        const username = document.getElementById("userName");
+        fetch("/whoami")
+          .then((x) => x.json())
+          .then((data) => {
+            if (data.d) {
+              username.textContent = data.d;
+              const logout = document.getElementById("btnLogout");
+              logout.removeAttribute("disabled");
+            } else {
+              username.textContent = "Not logged in";
+            }
+          });
+      })();
+    </script>
   </body>
-  <script src="//ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js" type="application/javascript"></script>
-  <script type="text/javascript">
-    $(function () {
-      $.ajax({
-        url: '/whoami',
-        cache: false,
-        success: function(data) {
-          if (data.d) {
-            $('#userName').text(data.d);
-            $('#btnLogout').removeAttr('disabled');
-            $('#btnLogout').click(function() {
-              $.post('/logout', null, function() {
-                location.reload();
-              });
-            });
-          } else {
-            $('#userName').text('Not logged in');
-          }
-        }
-      });
-    });
-  </script>
 </html>

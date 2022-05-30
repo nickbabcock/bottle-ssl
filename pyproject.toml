@@ -8,7 +8,7 @@ authors = ["Nick Babcock <nbabcock19@hotmail.com>"]
 python = ">=2.7,<2.8 || >=3.6,<4"
 beaker = "^1.11"
 cheroot = "^8.6"
-bottle = "^0.12.19"
+bottle = "^0.12.21"
 requests = "^2.27.1"
 
 [tool.poetry.dev-dependencies]

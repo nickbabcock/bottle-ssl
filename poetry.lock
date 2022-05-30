@@ -52,7 +52,7 @@ testsuite = ["nose", "mock", "pycryptodome", "webtest", "coverage", "cryptograph
 
 [[package]]
 name = "bottle"
-version = "0.12.19"
+version = "0.12.21"
 description = "Fast and simple WSGI-framework for small web-applications."
 category = "main"
 optional = false
@@ -397,7 +397,7 @@ testing = ["pathlib2", "unittest2", "jaraco.itertools", "func-timeout"]
 [metadata]
 lock-version = "1.1"
 python-versions = ">=2.7,<2.8 || >=3.6,<4"
-content-hash = "2ea38a0882ed3259366a94bc51fa8e39d060dee0b59f019da7a98dbce69044fe"
+content-hash = "781dd9a5420d1adfbaa09dc2e2bb01fd52be31f534914cdf8f23a69f45ca8afc"
 
 [metadata.files]
 atomicwrites = [
@@ -416,8 +416,8 @@ beaker = [
     {file = "Beaker-1.11.0.tar.gz", hash = "sha256:ad5d1c05027ee3be3a482ea39f8cb70339b41e5d6ace0cb861382754076d187e"},
 ]
 bottle = [
-    {file = "bottle-0.12.19-py3-none-any.whl", hash = "sha256:f6b8a34fe9aa406f9813c02990db72ca69ce6a158b5b156d2c41f345016a723d"},
-    {file = "bottle-0.12.19.tar.gz", hash = "sha256:a9d73ffcbc6a1345ca2d7949638db46349f5b2b77dac65d6494d45c23628da2c"},
+    {file = "bottle-0.12.21-py3-none-any.whl", hash = "sha256:6e1c9817019dae3a8c20adacaf09035251798d2ae2fcc8ce43157ee72965f257"},
+    {file = "bottle-0.12.21.tar.gz", hash = "sha256:787c61b6cc02b9c229bf2663011fac53dd8fc197f7f8ad2eeede29d888d7887e"},
 ]
 certifi = [
     {file = "certifi-2021.10.8-py2.py3-none-any.whl", hash = "sha256:d62a0163eb4c2344ac042ab2bdf75399a71a2d8c7d47eac2e2ee91b9d6339569"},

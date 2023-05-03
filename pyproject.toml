@@ -6,10 +6,10 @@ authors = ["Nick Babcock <nbabcock19@hotmail.com>"]
 
 [tool.poetry.dependencies]
 python = ">=2.7,<2.8 || >=3.6,<4"
-beaker = "^1.11"
 cheroot = "^8.6"
-bottle = "^0.12.23"
+bottle = "^0.12.25"
 requests = "^2.27.1"
+Beaker = "^1.12.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^4.6"

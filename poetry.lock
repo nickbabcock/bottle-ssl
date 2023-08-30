@@ -394,7 +394,7 @@ docs = ["rst.linker (>=1.9)", "jaraco.packaging (>=3.2)", "sphinx"]
 [metadata]
 lock-version = "1.1"
 python-versions = ">=2.7,<2.8 || >=3.6,<4"
-content-hash = "737a16311d98b41c5aff09d274d75bf80caa6c26ade279d4a6cf0218e6de6a08"
+content-hash = "20468f0a4496f75fbacb87e7554221d579465eb9a4a498a9cfb85080f3bd0f22"
 
 [metadata.files]
 atomicwrites = [

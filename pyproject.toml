@@ -13,4 +13,4 @@ Beaker = "^1.12.1"
 
 [tool.poetry.dev-dependencies]
 pytest = "^4.6"
-requests = "^2.21"
+requests = "^2.27.1"
